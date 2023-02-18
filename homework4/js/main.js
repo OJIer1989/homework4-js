@@ -32,7 +32,7 @@ function Buy(cash, bank) {
       console.log(`Вы можете купить ${(cash / bank[b].sell).toFixed(2)} USD`);
     }
     
-    else if (bank[b].name === 'euro' && cash >= bank[b].sell){
+    if (bank[b].name === 'euro' && cash >= bank[b].sell){
       console.log(`Вы можете купить ${(cash / bank[b].sell).toFixed(2)} EURO `);
     }
   else{
@@ -49,7 +49,7 @@ function sell(amountUsa,amountEuro ,b) {
   if(bank[b].name === 'usa' && amountUsa >= bank[b].buy  ){
     console.log(`Вы можете купить ${amountUsa * bank[b].buy} UA`);
   }
-  else if(bank[b].name === 'euro' && amountEuro >= bank[b].buy){
+  if(bank[b].name === 'euro' && amountEuro >= bank[b].buy){
     console.log(`Вы можете купить ${amountEuro * bank[b].buy} UA`);
   }
  else{
@@ -98,7 +98,7 @@ function names(b) {
     if ((Numbers[b] % 2) == 1) {
       EvenNumbers.push(Numbers[b]);
     }
-    else if ((Numbers[b] % 2) == 0) {
+    if ((Numbers[b] % 2) == 0) {
       EvenNumbers.push(Numbers[b] * 4);
     }
      else{
@@ -136,7 +136,7 @@ function figure(i) {
     if (figurs[i].figure === 'circle') {
       console.log(`Радиус фигуры ` + figurs[i].figure + ` будет  ` + Math.PI*Math.pow(figurs[i].radius,2) )
     }
-    else if( figurs[i].figure === 'Squar' || figurs[i].figure === 'Rectangle'){
+    if( figurs[i].figure === 'Squar' || figurs[i].figure === 'Rectangle'){
       console.log(`Площадь фигуры ` + figurs[i].sizeA * figurs[i].sizeB + 'см');
     }
     
@@ -154,7 +154,7 @@ function numbers() {
   for (let a = 0; a<NotWholeNumber.length;a++){
     NotWholeNumber[a] = Math.ceil(NotWholeNumber[a])
   }
-}
+} 
 numbers()
 console.log(NotWholeNumber);
 
