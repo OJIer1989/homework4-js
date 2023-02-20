@@ -49,7 +49,7 @@ function sell(amountUsa,amountEuro ,b) {
   if(bank[b].name === 'usa' && amountUsa >= bank[b].buy  ){
     console.log(`Вы можете купить ${amountUsa * bank[b].buy} UA`);
   }
-  if(bank[b].name === 'euro' && amountEuro >= bank[b].buy){
+  else if(bank[b].name === 'euro' && amountEuro >= bank[b].buy){
     console.log(`Вы можете купить ${amountEuro * bank[b].buy} UA`);
   }
  else{
